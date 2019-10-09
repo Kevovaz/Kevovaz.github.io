@@ -1,9 +1,141 @@
 body {
-  background-color: powderblue;
+  background-color: lightgrey;
+  background-color-opacity: .8; 
 }
 h1 {
   color: blue;
+  font-size: 25px;
+}
+h2{
+	font-size:25px;
+	text-align: left;
+}
+h3{
+	font-size:20px;
+	vertical-align: middle;
 }
 p {
   color: black;
+  font-size: 18px;
+  text-align: left;
+  vertical-align: middle;
 }
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 10% auto auto;
+  grid-template-rows: 10% auto auto;
+  grid-gap: 35px;
+  position: center;
+  grid-template-areas: 
+    'header'
+    'sidebar'
+    'resume';
+  /*height: 100vh;*/
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/  
+  text-align: center;  
+  padding: 20px 0;
+
+}
+
+.profile{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	height: 100px;
+	width: 100px;
+	border: 10px;
+	border-radius: 900px;
+
+}
+.sidebar {
+	/*display:flex;*/	
+	 /* Full-height: remove this if you want "auto" height */
+	width: 160px; /* Set the width of the sidebar */
+	background-color: grey; 
+	
+	padding-top: 50px;
+	grid-row-start: 2;
+  	grid-column-start: 1;
+
+
+}
+
+.header{
+	grid-area: header;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(60, 179, 113,.8);	
+	grid-column-start: 1;
+  	grid-column-end: 4;
+  	grid-row-start:1;
+  	border: 10px;
+  	border-radius: 5px;
+
+}
+
+.resume{
+	grid-column-start: 2;
+  	grid-column-end: 4;
+  	grid-row-start: 2;
+  	grid-row-end: 2;  	
+  	align-items: left;
+	justify-content: left; 
+	text-align: left;
+	width : 90%; 	 
+	position: center; 	
+}
+
+.icon{
+	height: 25px;
+	width: 25px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.icon2{
+	height: 40px;
+	width: 40px;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.resume-title{
+	clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.column{
+	display: grid;
+	grid-gap:10px;
+	text-align: left;
+	height: 200px;
+	grid-template-rows:10% 10% 10% 10% 10%;
+	grid-template-columns: 10% 1fr; 
+	
+
+}
+
+.border {
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+
+}
+
+.skills li{
+	font-size: 20px;
+}
+
+
+
+
+
